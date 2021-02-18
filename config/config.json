@@ -1,0 +1,30 @@
+{
+    "base_dir": "/home/purnima/appdir/Github/DATA/NSynth",
+    "instrument_list": "keyboard,guitar,mallet,string,reed,brass,vocal,flute",
+    "instrument_count": 3000,
+    "instrument_src": "acoustic",
+    "instrument_label": "instrument_family_str",
+    "sample_rate": 16000,
+    "total_epoch": 15,
+    "train": {
+        "audio_dir": "nsynth-train/audio", 
+        "label_dir": "nsynth-train/examples-subset-full-acoustic-3000.json",
+        "ensemble": "false"
+    },
+    "valid": {
+        "audio_dir": "nsynth-valid/audio",
+        "label_dir": "nsynth-valid/examples-subset-full-acoustic-3000.json",
+        "ensemble": "false"
+    },
+    "test": {
+        "audio_dir": "nsynth-test/audio",
+        "label_dir": "nsynth-test/examples-subset-full-acoustic-3000.json",
+        "ensemble": "false"
+    },
+    "n_mfcc": 40,
+    "filters": [16, 32, 48, 48, 64],
+    "kernels": [3, 3, 3, 3, 3],
+    "pooling": [2, 2, 2, 2, 2],
+    "padding": [1, 1, 1, 1, 1],
+    "dense": [2048]
+}
