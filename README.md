@@ -34,9 +34,8 @@ The following expertiments were conducted as part of this study:
 
 ## Running an experiment
 
-Acoustic only instruments - 
-
 1. To train acoustic instruments only, under the config folder, copy the contents of  config-acoustic.json into config.json. Similarly copy the contents of config-combined.json into config.json to run the combined instrument source-family experiments.  
-2. Run main.py to kickstart training for the acoustic only -  
+2. Update the config to reflect the location of your downloaded NSynth dataset. Also copy the files under labels directory to the downloaded folder.
+3. Run main.py to kickstart training for the acoustic only -  
 ```python main.py --operation=train --data_type=mfcc --batch_size=16 --learning_rate=0.0001```
-3. data_type currently supports mfcc, mel (for MelSpectrograms), if (for instantaneous frequency) and mel_harmonics (for percussive and harmonics representations in each channel of the input)
+4. data_type currently supports mfcc, mel (for MelSpectrograms), if (for instantaneous frequency) and mel_harmonics (for percussive and harmonics representations in each channel of the input)
